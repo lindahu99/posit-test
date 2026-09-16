@@ -4,11 +4,12 @@ library(pharmaverseraw)
 library(dplyr)
 
 args <- commandArgs(trailingOnly = TRUE)
+
 in_dir  <- args[1]
 out_dir <- args[2]
 
-ae_raw <- read.csv(file.path(in_dir, "ae.csv"))
-dm     <- read.csv(file.path(in_dir, "dm.csv"))
+#ae_raw <- read.csv(file.path("07_Programs/ae.csv"))
+#dm     <- read.csv(file.path("07_Programs/dm.csv"))
 
 ## ----r------------------------------------------------------------------------
 ae_raw <- ae_raw %>%
@@ -18,7 +19,7 @@ ae_raw <- ae_raw %>%
   )
 
 ## ----r, echo = TRUE-----------------------------------------------------------
-study_ct <- read.csv(file.path(in_dir, "sdtm_ct.csv"))
+study_ct <- read.csv(file.path("07_Programs/sdtm_ct.csv"))
 
 ## ----r------------------------------------------------------------------------
 ae <-
